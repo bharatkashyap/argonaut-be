@@ -36,9 +36,9 @@
 
 ### Params
 `account` address of requester\
-`type` type of requester: 'buyer' or 'seller'\
+`type` type of requester: 'buyer' or 'seller'
 
-<br/>
+
 ```
 { "account":"YGRUUUXS23G6DOIO5UZ3RYKDDYRVC7BJTSDYGMU5PORTHL2K7E2246BHLI"
     "type":"seller"
