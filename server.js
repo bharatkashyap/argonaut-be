@@ -208,7 +208,7 @@ async function doTransaction(req, res) {
     };
 }
 
-function fetchTransactions(req, res) {
+async function fetchTransactions(req, res) {
     const user = req.body.account;
     const seller = store.sellers.find(t => t.id === user);
     try {
