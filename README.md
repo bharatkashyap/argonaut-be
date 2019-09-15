@@ -1,6 +1,5 @@
 ## Argonaut
 
-===
 
 # /user
 ```GET``` 
