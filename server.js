@@ -211,7 +211,16 @@ async function doTransaction(req, res) {
 function fetchTransactions(req, res) {
     const user = req.body.account;
     const seller = store.sellers.find(t => t.id === user);
-    return seller.transactions;
+    try {
+        const algodclient = new algosdk.Algod(atoken, aserver, aport);
+        let tx = await algodclient.accountInformation(account);
+        let textedJson = JSON.stringify(tx, undefined, 4);
+        //console.log(textedJson);
+        let response = {"transactions": seller.transactions, "balance": textedJson.amount }
+        res.status(200).send(response);
+    } catch (e) {
+        console.log(e);
+    };
 }
 
 // function fetchPosts(req, res) {
