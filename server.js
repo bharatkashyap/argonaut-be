@@ -212,7 +212,7 @@ async function doTransaction(req, res) {
 async function fetchTransactions(req, res) {
     const user = req.body.account;
     const type = req.body.type;
-    const seller, buyer;
+    let seller, buyer;
     if(type === "seller") seller = store.sellers.find(t => t.id === user);
     else buyer = store.buyers.find(t => t.id === user);
     try {
@@ -297,7 +297,7 @@ async function fetchTransactions(req, res) {
 async function fetchUser(req, res) {
     // const user = req.body.user;
     // const account = req.body.account;
-    const account = req.body.account;
+    const account = req.query.account;
    
     try {
         const algodclient = new algosdk.Algod(atoken, aserver, aport);
