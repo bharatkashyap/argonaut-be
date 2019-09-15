@@ -211,7 +211,9 @@ async function doTransaction(req, res) {
 
 async function fetchTransactions(req, res) {
     const user = req.body.account;
-    const seller = store.sellers.find(t => t.id === user);
+    const type = req.body.type;
+    if(type === "seller") const seller = store.sellers.find(t => t.id === user);
+    else const buyer = store.buyers.find(t => t.id === user);
     try {
         const algodclient = new algosdk.Algod(atoken, aserver, aport);
         let tx = await algodclient.accountInformation(account);

@@ -24,3 +24,10 @@
 `mnem` mnemonic of buyer
 `name` name of buyer
 `meta` name of API and whatever else
+
+# /transactions
+```GET```
+
+### Params
+`account` address of requester\
+`type` type of requester: 'buyer' or 'seller'\
