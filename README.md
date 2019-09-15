@@ -19,10 +19,8 @@
 
 ### Params
 `from` address of buyer
-`to` address of seller
 `algos` amount
 `mnem` mnemonic of buyer
-`name` name of buyer
 `meta` name of API and whatever else
 
 # /transactions
