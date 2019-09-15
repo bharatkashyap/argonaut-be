@@ -92,25 +92,25 @@ function index(req, res) {
 }
 
 function validateToken(req, res, next) {
-    const authorizationHeader = req.headers.authorization;
-    if(authorizationHeader) {
-        const token = authorizationHeader.split(' ')[1];
-        if (token === argoBearerToken) next();
-        else {
-            result = {
-                status: 401,
-                error: 'Unauthorized.'
-            }
-            res.status(401).send(result);
-        }
-    }
-    else {
-        result = {
-            status: 403,
-            error: 'Forbidden.'
-        }
-        res.status(403).send(result);
-    }
+    // const authorizationHeader = req.headers.authorization;
+    // if(authorizationHeader) {
+    //     const token = authorizationHeader.split(' ')[1];
+    //     if (token === argoBearerToken) next();
+    //     else {
+    //         result = {
+    //             status: 401,
+    //             error: 'Unauthorized.'
+    //         }
+    //         res.status(401).send(result);
+    //     }
+    // }
+    // else {
+    //     result = {
+    //         status: 403,
+    //         error: 'Forbidden.'
+    //     }
+    //     res.status(403).send(result);
+    // }
 }
 
 function handleUpload(req, res) {
