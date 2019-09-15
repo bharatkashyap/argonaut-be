@@ -92,6 +92,7 @@ function index(req, res) {
 }
 
 function validateToken(req, res, next) {
+    next();
     // const authorizationHeader = req.headers.authorization;
     // if(authorizationHeader) {
     //     const token = authorizationHeader.split(' ')[1];
